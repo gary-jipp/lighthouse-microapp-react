@@ -3,7 +3,12 @@ import './App.css';
 
 function App() {
 
-  const listItem = <li>Some Stuff</li>;
+  const listArray = [
+    <li>Some stuff</li>,
+    <li>Some more stuff</li>,
+    <li>Some more stuff again</li>,
+    <li>Even more stuff</li>,
+  ];
 
 
   return (
@@ -15,7 +20,7 @@ function App() {
       <button id="clear" type="button">Clear List</button>
 
       <ul>
-        {listItem}
+        {listArray}
       </ul>
 
     </div>
