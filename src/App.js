@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './App.css';
 
 function App() {
@@ -16,7 +17,12 @@ function App() {
   });
 
   const addItem = function (event) {
-    setData(["new Item", ...data]);
+    const url = "http://ron-swanson-quotes.herokuapp.com/v2/quotes";
+
+    axios(url).then(result => {
+      setData([...result.data, ...data]);
+    });
+    
   };
 
   const clear = function () {
