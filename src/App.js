@@ -15,7 +15,6 @@ function App() {
     return (<li>{item}</li>);
   });
 
-
   const addItem = function (event) {
     const newData = [...data];
     newData.push("new Item")
