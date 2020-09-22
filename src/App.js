@@ -9,10 +9,9 @@ function App() {
     "Cultivating a manly musk puts opponent on notice.",
   ];
 
-  const listArray = [];
-  for (const item of data) {
-    listArray.push(<li>{item}</li>);
-  }
+  const listArray = data.map(item => {
+    return (<li>{item}</li>);
+  });
 
 
   return (
