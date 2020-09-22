@@ -17,7 +17,7 @@ function App() {
 
   const addItem = function (event) {
     const newData = ["new Item", ...data];
-    setData([newData]);
+    setData(newData);
   };
 
   const clear = function () {
