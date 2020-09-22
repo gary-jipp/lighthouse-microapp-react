@@ -6,6 +6,10 @@ function App() {
     <div className="App">
       <h3>Quote Generator - React</h3>
 
+      <button type="button">Add Item</button>
+      <span>&nbsp;</span>
+      <button id="clear" type="button">Clear List</button>
+
     </div>
   );
 }
