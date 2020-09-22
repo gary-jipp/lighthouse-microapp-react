@@ -1,20 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
 
-  const data = [
+  const initialData = [
     "I change my locks every 16 days.",
     "Creativity is for people with glasses who like to lie.",
     "Cultivating a manly musk puts opponent on notice.",
   ];
+
+  const [data, setData] = useState(initialData);
 
   const listArray = data.map(item => {
     return (<li>{item}</li>);
   });
 
   const clear = function () {
-    data.length = 0;
+    setData([]);
   };
 
   return (
