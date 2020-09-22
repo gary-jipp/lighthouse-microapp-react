@@ -3,12 +3,16 @@ import './App.css';
 
 function App() {
 
-  const listArray = [
-    <li>Some stuff</li>,
-    <li>Some more stuff</li>,
-    <li>Some more stuff again</li>,
-    <li>Even more stuff</li>,
+  const dataArray = [
+    "I change my locks every 16 days.",
+    "Creativity is for people with glasses who like to lie.",
+    "Cultivating a manly musk puts opponent on notice.",
   ];
+
+  const listArray = [];
+  for (const item of dataArray) {
+    listArray.push(<li>{item}</li>);
+  }
 
 
   return (
