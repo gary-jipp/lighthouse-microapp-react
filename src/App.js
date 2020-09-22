@@ -3,14 +3,14 @@ import './App.css';
 
 function App() {
 
-  const dataArray = [
+  const data = [
     "I change my locks every 16 days.",
     "Creativity is for people with glasses who like to lie.",
     "Cultivating a manly musk puts opponent on notice.",
   ];
 
   const listArray = [];
-  for (const item of dataArray) {
+  for (const item of data) {
     listArray.push(<li>{item}</li>);
   }
 
