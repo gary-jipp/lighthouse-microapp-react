@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
 
-  const data = [
+  const testData = [
     "I change my locks every 16 days.",
     "Creativity is for people with glasses who like to lie.",
     "Cultivating a manly musk puts opponent on notice.",
   ];
 
+  const [data, setData] = useState(testData);
+
   const listArray = data.map(item => {
     return (<li>{item}</li>);
   });
 
-
+  
   return (
     <div className="App">
       <h3>Quote Generator - React</h3>
