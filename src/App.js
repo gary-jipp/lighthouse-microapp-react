@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <h3>Quote Generator - React</h3>
-
+      
     </div>
   );
 }
