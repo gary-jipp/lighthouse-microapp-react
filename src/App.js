@@ -4,13 +4,7 @@ import './App.css';
 
 function App() {
 
-  const initialData = [
-    "I change my locks every 16 days.",
-    "Creativity is for people with glasses who like to lie.",
-    "Cultivating a manly musk puts opponent on notice.",
-  ];
-
-  const [data, setData] = useState(initialData);
+  const [data, setData] = useState([]);
 
   const listArray = data.map(item => {
     return (<li>{item}</li>);
