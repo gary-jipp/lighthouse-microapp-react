@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
 
-  const item = <li>Some Stuff</li>;
+  const listItem = <li>Some Stuff</li>;
 
 
   return (
@@ -15,7 +15,7 @@ function App() {
       <button id="clear" type="button">Clear List</button>
 
       <ul>
-        {item}
+        {listItem}
       </ul>
 
     </div>
