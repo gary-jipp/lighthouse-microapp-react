@@ -10,6 +10,10 @@ function App() {
       <span>&nbsp;</span>
       <button id="clear" type="button">Clear List</button>
       
+      <ul>
+        <li>Some Stuff</li>
+      </ul>
+
     </div>
   );
 }
