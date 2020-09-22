@@ -15,6 +15,13 @@ function App() {
     return (<li>{item}</li>);
   });
 
+
+  const addItem = function (event) {
+    const newData = [...data];
+    newData.push("new Item")
+    setData(newData);
+  };
+
   const clear = function () {
     setData([]);
   };
@@ -23,7 +30,7 @@ function App() {
     <div className="App">
       <h3>Quote Generator - React</h3>
 
-      <button type="button">Add Item</button>
+      <button type="button" onClick={addItem}>Add Item</button>
       <span>&nbsp;</span>
       <button id="clear" type="button" onClick={clear}>Clear List</button>
 
