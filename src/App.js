@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  console.log("Rendering Component", new Date().getTime());
 
   const initialData = [
     "I change my locks every 16 days.",
