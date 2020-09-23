@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 
 function App() {
+  console.log("Rendering Component", new Date().getTime());
 
   const initialData = [
     "I change my locks every 16 days.",
@@ -20,7 +21,7 @@ function App() {
     const url = "http://ron-swanson-quotes.herokuapp.com/v2/quotes";
 
     axios(url).then(result => {
-      setData([...result.data, ...data]);
+      setData(prev=>[...prev, ...data]);
     });
     
   };
