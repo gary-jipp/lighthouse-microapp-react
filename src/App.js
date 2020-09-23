@@ -10,11 +10,12 @@ function App() {
     "Cultivating a manly musk puts opponent on notice.",
   ];
 
-  const listArray = data.map(item => {
-    return (<li>{item}</li>);
+  const listArray = data.map((item, i) => {
+    return (<li key={i}>{item}</li>);
   });
 
   const clear = function () {
+    console.log("clearing list");
     data.length = 0;
   };
 
