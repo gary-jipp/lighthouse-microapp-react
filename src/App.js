@@ -3,11 +3,13 @@ import axios from 'axios';
 import './App.css';
 
 function App() {
+  console.log("Rendering Component", new Date().getTime());
+  // Note we removed StrictMode from index.js to prevent double render
 
   const [data, setData] = useState([]);
 
-  const listArray = data.map(item => {
-    return (<li>{item}</li>);
+  const listArray = data.map((item, i) => {
+    return (<li key={i}>{item}</li>);
   });
 
   const addItem = function (event) {
