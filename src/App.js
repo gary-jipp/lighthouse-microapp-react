@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
 
+function useForceUpdate() {
+  const [, setValue] = useState(0); // integer state
+  return () => setValue(value => ++value); // update the state to force render
+}
+
 function App() {
   console.log("Rendering Component", new Date().getTime());
 
@@ -11,13 +16,19 @@ function App() {
   ];
 
   const [data, setData] = useState(initialData);
+  const forceUpdate = useForceUpdate();
 
   const listArray = data.map((item, i) => {
     return (<li key={i}>{item}</li>);
   });
 
   const clear = function () {
-    setData([]);
+    console.log("clearing list", new Date().getTime());
+
+    data.length = 0;  // Just changes the existing 'data' state object
+    setData(data);    // Still Doesn't work, same array object so React doesn't notice
+    // setData([]);      // Need to use a new array object
+    // forceUpdate();    // 
   };
 
   return (
