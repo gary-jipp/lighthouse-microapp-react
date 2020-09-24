@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
-function useForceUpdate() {
-  const [, setValue] = useState(0); // integer state
-  return () => setValue(value => ++value); // update the state to force render
-}
+
 
 function App() {
   console.log("Rendering Component", new Date().getTime());
@@ -15,8 +12,9 @@ function App() {
     "Cultivating a manly musk puts opponent on notice.",
   ];
 
+  const [value, setValue] = useState(0); // integer state
   const [data, setData] = useState(initialData);
-  const forceUpdate = useForceUpdate();
+  // eslint-disable-next-line
 
   const listArray = data.map((item, i) => {
     return (<li key={i}>{item}</li>);
@@ -28,7 +26,7 @@ function App() {
     data.length = 0;  // Just changes the existing 'data' state object
     setData(data);    // Still Doesn't work, same array object so React doesn't notice
     // setData([]);      // Need to use a new array object
-    // forceUpdate();    // 
+    // setValue(value+1);   // Set some othe5r state to force a render
   };
 
   return (
