@@ -12,7 +12,6 @@ function App() {
   console.log("Rendering App Component", new Date().getTime());
   const [data, setData] = useState(initialData);
 
-
   const addItem = function (event) {
     const url = "http://ron-swanson-quotes.herokuapp.com/v2/quotes";
     axios(url).then(res => {
