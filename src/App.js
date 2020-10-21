@@ -12,10 +12,6 @@ function App() {
 
   console.log("Rendering App Component", new Date().getTime());
 
-  const listArray = data.map(item => {
-    return (<li>{item}</li>);
-  });
-
   const addItem = function (event) {
     setData(["new Item", ...data]);
   };
@@ -23,6 +19,10 @@ function App() {
   const clear = function () {
     setData([]);
   };
+
+  const listArray = data.map(item => {
+    return (<li>{item}</li>);
+  });
 
   return (
     <div className="App">
