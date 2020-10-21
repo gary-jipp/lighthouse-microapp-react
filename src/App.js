@@ -3,11 +3,9 @@ import axios from 'axios';
 import './App.css';
 
 function App() {
+  // Note: we removed StrictMode from index.js to prevent double render
   console.log("Rendering Component", new Date().getTime());
-  // Note we removed StrictMode from index.js to prevent double render
-
   const [data, setData] = useState([]);
-
 
   const addItem = function (event) {
     const url = "http://ron-swanson-quotes.herokuapp.com/v2/quotes";
