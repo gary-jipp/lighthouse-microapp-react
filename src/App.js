@@ -9,9 +9,9 @@ const initialData = [
 ];
 
 function App() {
-  console.log("Rendering App Component", new Date().getTime());
-
   const [data, setData] = useState(initialData);
+
+  console.log("Rendering App Component", new Date().getTime());
 
   const listArray = data.map(item => {
     return (<li>{item}</li>);
@@ -23,7 +23,7 @@ function App() {
     axios(url).then(res => {
       data.push(res.data);
       setData([...data]);
-      
+
       // setData(prev => [...prev, ...res.data]);
     });
 
