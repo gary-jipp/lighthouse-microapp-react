@@ -14,7 +14,6 @@ function App() {
     return (<li>{item}</li>);
   });
 
-
   return (
     <div className="App">
       <h3>Quote Generator - React</h3>
