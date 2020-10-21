@@ -11,11 +11,9 @@ function App() {
   ];
 
   const listArray = [];
-  let i = 1;
   for (const item of data) {
-    listArray.push(<li key={++i}>{item}</li>);
+    listArray.push(<li>{item}</li>);
   }
-  // Note: React wants a "key" attribte for lists, or it gets cranky
 
   return (
     <div className="App">
