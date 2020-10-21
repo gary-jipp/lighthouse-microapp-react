@@ -10,16 +10,16 @@ const data = [
 function App() {
   console.log("Rendering App Component", new Date().getTime());
 
-  //  We can use the array index as the "key". That's built into map()
-  const listArray = data.map((item, i) => {
-    return (<li key={i}>{item}</li>);
-  });
-
   const clear = function () {
     console.log("clearing list");
     data.length = 0;
     // We cleared the list but nothing happened!  Why?
   };
+
+  //  We can use the array index as the "key". That's built into map()
+  const listArray = data.map((item, i) => {
+    return (<li key={i}>{item}</li>);
+  });
 
   return (
     <div className="App">
