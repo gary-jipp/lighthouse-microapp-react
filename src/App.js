@@ -7,7 +7,7 @@ function App() {
   const data = [
     "I change my locks every 16 days.",
     "Creativity is for people with glasses who like to lie.",
-    "Cultivating a manly musk puts opponent on notice.",
+    "Cultivating a manly musk puts opponents on notice.",
   ];
 
   //  We can always use the array index as the "key". That's built into map()
@@ -18,6 +18,7 @@ function App() {
   const clear = function () {
     console.log("clearing list");
     data.length = 0;
+    // We cleared the list but nothing happened!  Why?
   };
 
   return (
