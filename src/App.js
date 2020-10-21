@@ -8,13 +8,8 @@ const initialData = [
 ];
 
 function App() {
-  const [data, setData] = useState(initialData);
-
   console.log("Rendering App Component", new Date().getTime());
-
-  const listArray = data.map((item, i) => {
-    return (<li key={i}>{item}</li>);
-  });
+  const [data, setData] = useState(initialData);
 
   const clear = function () {
     console.log("clearing list", new Date().getTime());
@@ -24,6 +19,10 @@ function App() {
 
     // setData([]);      // Need to use a new state object
   };
+
+  const listArray = data.map((item, i) => {
+    return (<li key={i}>{item}</li>);
+  });
 
   return (
     <div className="App">
