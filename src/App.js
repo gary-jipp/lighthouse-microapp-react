@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 function App() {
-  console.log("Rendering Component", new Date().getTime());
+  console.log("Rendering App Component", new Date().getTime());
 
   const data = [
     "I change my locks every 16 days.",
@@ -11,8 +11,9 @@ function App() {
   ];
 
   const listArray = [];
+  let i = 1;
   for (const item of data) {
-    listArray.push(<li>{item}</li>);
+    listArray.push(<li key={++i}>{item}</li>);
   }
 
 
