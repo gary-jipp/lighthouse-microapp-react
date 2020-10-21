@@ -7,7 +7,7 @@ function App() {
   const data = [
     "I change my locks every 16 days.",
     "Creativity is for people with glasses who like to lie.",
-    "Cultivating a manly musk puts opponent on notice.",
+    "Cultivating a manly musk puts opponents on notice.",
   ];
 
   const listArray = [];
