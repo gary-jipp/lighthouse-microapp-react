@@ -16,7 +16,6 @@ function App() {
     listArray.push(<li key={++i}>{item}</li>);
   }
 
-
   return (
     <div className="App">
       <h3>Quote Generator - React</h3>
