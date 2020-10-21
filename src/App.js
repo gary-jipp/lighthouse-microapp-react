@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 function App() {
-  console.log("Rendering App", new Date().getTime());
+  console.log("Rendering App Component", new Date().getTime());
   
   return (
     <div className="App">
