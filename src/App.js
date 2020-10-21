@@ -9,7 +9,7 @@ function App() {
     <li key="2">This is another list item</li>,
     <li key="3">This is yet another list item</li>,
   ];
-  // Note: React wants a "key" attribte for lists, or it gets cranky
+  // Note: React wants a "key" attribute for lists, or it gets cranky
 
   return (
     <div className="App">
