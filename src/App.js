@@ -8,22 +8,21 @@ function App() {
 
   const [data, setData] = useState([]);
 
-  const listArray = data.map((item, i) => {
-    return (<li key={i}>{item}</li>);
-  });
 
   const addItem = function (event) {
     const url = "http://ron-swanson-quotes.herokuapp.com/v2/quotes";
-
     axios(url).then(result => {
       setData([...result.data, ...data]);
     });
-    
   };
 
   const clear = function () {
     setData([]);
   };
+
+  const listArray = data.map((item, i) => {
+    return (<li key={i}>{item}</li>);
+  });
 
   return (
     <div className="App">
