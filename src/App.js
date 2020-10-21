@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+
 const initialData = [
   "I change my locks every 16 days.",
   "Creativity is for people with glasses who like to lie.",
