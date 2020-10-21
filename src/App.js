@@ -16,7 +16,7 @@ function App() {
     return (<li>{item}</li>);
   });
 
-  const addItem = function () {
+  const addItem = function (event) {
     setData(["new Item", ...data]);
   };
 
