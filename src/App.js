@@ -10,6 +10,7 @@ function App() {
     "Cultivating a manly musk puts opponent on notice.",
   ];
 
+  //  We can always use the array index as the "key". That's built into map()
   const listArray = data.map((item, i) => {
     return (<li key={i}>{item}</li>);
   });
