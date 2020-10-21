@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
 
-
-
 function App() {
   console.log("Rendering Component", new Date().getTime());
 
@@ -25,8 +23,8 @@ function App() {
 
     data.length = 0;  // Just changes the existing 'data' state object
     setData(data);    // Still Doesn't work, same array object so React doesn't notice
+
     // setData([]);      // Need to use a new array object
-    // setValue(value+1);   // Set some othe5r state to force a render
   };
 
   return (
