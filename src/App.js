@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
 import './App.css';
+const initialData = [
+  "I change my locks every 16 days.",
+  "Creativity is for people with glasses who like to lie.",
+  "Cultivating a manly musk puts opponent on notice.",
+];
 
 function App() {
-  console.log("Rendering Component", new Date().getTime());
-
-  const initialData = [
-    "I change my locks every 16 days.",
-    "Creativity is for people with glasses who like to lie.",
-    "Cultivating a manly musk puts opponent on notice.",
-  ];
-
-  const [value, setValue] = useState(0); // integer state
   const [data, setData] = useState(initialData);
-  // eslint-disable-next-line
+  
+  console.log("Rendering App Component", new Date().getTime());
 
   const listArray = data.map((item, i) => {
     return (<li key={i}>{item}</li>);
@@ -24,7 +21,7 @@ function App() {
     data.length = 0;  // Just changes the existing 'data' state object
     setData(data);    // Still Doesn't work, same array object so React doesn't notice
 
-    // setData([]);      // Need to use a new array object
+    // setData([]);      // Need to use a new state object
   };
 
   return (
