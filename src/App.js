@@ -8,23 +8,22 @@ const initialData = [
 ];
 
 function App() {
-  const [data, setData] = useState(initialData);
-  
   console.log("Rendering App Component", new Date().getTime());
-
-  const listArray = data.map((item) => {
-    return (<li>{item}</li>);
-  });
+  const [data, setData] = useState(initialData);
 
   const addItem = function (event) {
     const newData = [...data];
-    newData.push("new Item")
+    newData.push("new Item");
     setData(newData);
   };
 
   const clear = function () {
     setData([]);
   };
+
+  const listArray = data.map((item) => {
+    return (<li>{item}</li>);
+  });
 
   return (
     <div className="App">
