@@ -20,7 +20,7 @@ function App() {
     console.log("clearing list", new Date().getTime());
 
     data.length = 0;  // Just changes the existing 'data' state object
-    setData(data);    // Still Doesn't work, same array object so React doesn't notice
+    setData(data);    // Still doesn't work! Same array object so React doesn't notice
 
     // setData([]);      // Need to use a new state object
   };
