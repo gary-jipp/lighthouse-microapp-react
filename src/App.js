@@ -2,13 +2,12 @@ import React from 'react';
 import './App.css';
 
 function App() {
-  console.log("Rendering Component", new Date().getTime());
+  console.log("Rendering App Component", new Date().getTime());
 
   const listArray = [
-    <li>Some stuff</li>,
-    <li>Some more stuff</li>,
-    <li>Some more stuff again</li>,
-    <li>Even more stuff</li>,
+    <li>This is a list item</li>,
+    <li>This is another list item</li>,
+    <li>This is yet another list item</li>,
   ];
 
 
