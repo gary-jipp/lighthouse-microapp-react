@@ -5,11 +5,11 @@ function App() {
   console.log("Rendering App Component", new Date().getTime());
 
   const listArray = [
-    <li>This is a list item</li>,
-    <li>This is another list item</li>,
-    <li>This is yet another list item</li>,
+    <li key="1">This is a list item</li>,
+    <li key="2">This is another list item</li>,
+    <li key="3">This is yet another list item</li>,
   ];
-
+  // Note: React wants a "key" attribte for lists, or it gets cranky
 
   return (
     <div className="App">
