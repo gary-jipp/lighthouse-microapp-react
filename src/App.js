@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import './App.css';
 
+const initialData = [
+  "I change my locks every 16 days.",
+  "Creativity is for people with glasses who like to lie.",
+  "Cultivating a manly musk puts opponent on notice.",
+];
+
 function App() {
-  console.log("Rendering App Component", new Date().getTime());
-
-  const initialData = [
-    "I change my locks every 16 days.",
-    "Creativity is for people with glasses who like to lie.",
-    "Cultivating a manly musk puts opponent on notice.",
-  ];
-
   const [data, setData] = useState(initialData);
+  
+  console.log("Rendering App Component", new Date().getTime());
 
   const listArray = data.map((item) => {
     return (<li>{item}</li>);
