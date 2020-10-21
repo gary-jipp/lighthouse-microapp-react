@@ -9,7 +9,7 @@ const initialData = [
 
 function App() {
   const [data, setData] = useState(initialData);
-  
+
   console.log("Rendering App Component", new Date().getTime());
 
   const listArray = data.map((item, i) => {
