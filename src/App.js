@@ -13,7 +13,7 @@ function App() {
       <button id="clear" type="button">Clear List</button>
       
       <ul>
-        <li>Here is a list item</li>
+        <li>This is a list item</li>
       </ul>
 
     </div>
