@@ -9,29 +9,26 @@ const initialData = [
 ];
 
 function App() {
+  console.log("Rendering App Component", new Date().getTime());
   const [data, setData] = useState(initialData);
 
-  console.log("Rendering App Component", new Date().getTime());
-
-  const listArray = data.map(item => {
-    return (<li>{item}</li>);
-  });
 
   const addItem = function (event) {
     const url = "http://ron-swanson-quotes.herokuapp.com/v2/quotes";
-
     axios(url).then(res => {
       data.push(res.data);
       setData([...data]);
-
       // setData(prev => [...prev, ...res.data]);
     });
-
   };
 
   const clear = function () {
     setData([]);
   };
+
+  const listArray = data.map(item => {
+    return (<li>{item}</li>);
+  });
 
   return (
     <div className="App">
