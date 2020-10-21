@@ -12,13 +12,13 @@ function App() {
 
   const [data, setData] = useState(initialData);
 
-  const listArray = data.map((item, i) => {
-    return (<li key={i}>{item}</li>);
+  const listArray = data.map((item) => {
+    return (<li>{item}</li>);
   });
 
   const addItem = function (event) {
     const newData = [...data];
-    newData.push("new Item");
+    newData.push("new Item")
     setData(newData);
   };
 
