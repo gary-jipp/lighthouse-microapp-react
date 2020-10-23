@@ -9,9 +9,11 @@ function App() {
 
   const addItem = function (event) {
     const url = "http://ron-swanson-quotes.herokuapp.com/v2/quotes";
-    axios(url).then(result => {
-      setData([...result.data, ...data]);
-    });
+    axios(url)
+      .then(result => {
+        setData([...result.data, ...data]);
+      })
+      .catch(e => console.log(e));
   };
 
   const clear = function () {
