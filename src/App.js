@@ -8,7 +8,7 @@ function App() {
   const [data, setData] = useState([]);
 
   const addItem = function (event) {
-    const url = "http://ron-swanson-quotes.herokuapp.com/v2/quotes";
+    const url = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
     axios(url)
       .then(result => {
         setData([...result.data, ...data]);
